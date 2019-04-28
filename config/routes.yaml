@@ -1,0 +1,13 @@
+home:
+  path: /
+  controller: App\Controller\HomeController::index
+
+buy:
+  path: /buy
+  controller: App\Controller\BuyController::index
+admin:
+  path: /admin
+  controller: App\Controller\admin\AdminBuyController::index
+
+logout:
+  path: /logout

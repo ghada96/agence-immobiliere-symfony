@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title 'tous nos produits '%}
+
+{% block body %}
+        <div class="jumbotron text-center">
+        <h1>vous trouvez ici tous nos produits à vendre </h1>
+
+        <p> agence est un site web qui vous permet de publier vos articles facilement 
+        soyant le bienvenue , nous sommes à votre service</p>
+        </div>
+
+                <div class="row">
+                {% for buy in properties %}
+                        <div class="col-md-4">
+                        {% include 'pages/bien/buy.html.twig' %}
+                        </div>
+                {% endfor %}
+                </div>
+
+
+
+
+
+{% endblock %}

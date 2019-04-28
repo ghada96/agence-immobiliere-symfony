@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+        {% block body %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+
+                    </div>
+                    <div class="col-md-4">
+                      <h1>                {{ property.title }}
+                      </h1>
+                        <h2>{{ property.rooms }} piéces -  {{ property.surface }} m²</h2>
+                       <div class="text-danger" style="font-weight: bold;font-size: 2rem;">                {{ property.formatedPrice}}$
+                       </div>
+                        <a href="#" class="btn btn-danger">Contacter l'agence</a>
+                    </div>
+                </div>
+                <nav ></nav>
+                <p>                {{ property.description}}
+                </p>
+                <div class="row">
+                    <div class="col-md-8">
+                        <table class="table table-striped">
+                            <tr>
+                                <td>Surface habitable</td>
+                                <td>{{ property.surface }} m²</td>
+                            </tr>
+                            <tr>
+                                <td>Piéces</td>
+                                <td>                {{ property.rooms }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Chambres</td>
+                            <td>{{ property.bedroom }}</td>
+                            </tr>
+                            <tr>
+                                <td>Etages</td>
+                            <td>{{ property.floor}}</td>
+                            </tr>
+                            <tr>
+                                <td>Type de chauffage</td>
+                            <td>{{ property.chauffage}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        {% endblock %}

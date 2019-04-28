@@ -1,0 +1,13 @@
+<div class="card mb-4">
+<div class="card-body">
+    <h5 class="card-title">
+        <a href="{{ path('buy.show',{slug:buy.slug,id:buy.id})}}">
+            {{ buy.title }}
+        </a>
+    </h5>
+    <p class="card-text">{{ buy.city }} ({{ buy.codepostal }})</p>
+    <div class="text-primary">
+        {{ buy.price }}$
+    </div>
+</div>
+</div>

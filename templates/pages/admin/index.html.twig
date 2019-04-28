@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+        {% block body %}
+
+
+            <div class="container mt-4 " >
+                <h2>Gérer les  biens</h2>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                    <th>Titre</th>
+                    <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for property in properties %}
+                        <tr>
+                        <td>{{ property.title }}</td>
+                        <td><a href="{{  path('admin.buy.edit',{id:property.id})}}"class="btn btn-primary">Editer</a>
+                            <form method="post" action="{{ path('admin.buy.delete',{id:property.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous vraiment sur ?')">
+                                <input type="hidden" name="_method"value="DELETE">
+                                <button class="btn btn-danger">Supprimer</button>
+                            </form>
+                        </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+
+                </table>
+                <a href="{{ path('admin.buy.create') }}" class=" btn btn-danger">Créer un nouveau bien</a>
+
+
+            </div>
+
+        {% endblock %}
+
+
+
